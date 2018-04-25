@@ -62,10 +62,15 @@ release:
 	topkg publish
 
 	topkg opam pkg
-	topkg opam pkg --pkg-name owl
-	topkg opam pkg --pkg-name owl-zoo
-	topkg opam pkg --pkg-name owl-top
+	topkg opam submit
 
+	topkg opam pkg --pkg-name owl
 	topkg opam submit --pkg-name owl
+
+	topkg opam pkg --pkg-name owl-zoo
+	topkg opam submit --pkg-name owl-zoo
+
+	topkg opam pkg --pkg-name owl-top
+	topkg opam submit --pkg-name owl-top
 
 	@echo "$$_OWL_RELEASE_WARNING"
