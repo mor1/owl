@@ -10,9 +10,9 @@ script:
 
 env:
   global:
-    - OCAML_VERSION=4.06.0      # 4.06.1 Docker images not yet available
+    - OCAML_VERSION=4.06.1
     - PACKAGE="owl"
-    - PINS="owl-base:."
+    - PIN="owl-base:."
     - PRE_INSTALL_HOOK="cd /home/opam/opam-repository && git pull origin master && opam update -uy"
   matrix:
     # - DISTRO=alpine
